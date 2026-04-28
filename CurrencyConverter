@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class CurrencyConverter {
+    public static double convert(double amount , double rate)
+    {
+        return amount*rate;
+
+    }
+    public static void main(String[] args)
+    {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("=== currency converter ===");
+        System.out.println("enter base currency(e.g., USD):");
+        String base = scan.next();
+        System.out.println("enter target currency(e.g., INR):");
+        String target = scan.next();
+        System.out.println("enter amount: ");
+        double amount = scan.nextDouble();
+        System.out.println("enter exchange rate");
+        double rate=scan.nextDouble();
+        double result=convert(amount,rate);
+        System.out.println("converted amount:" + result + " " + target);
+        scan.close();
+
+    }
+}
